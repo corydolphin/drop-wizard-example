@@ -25,8 +25,8 @@ public class HelloWorldService extends Service<HelloWorldConfiguration> {
         Environment environment)
         throws Exception
     {
-        final String template = configuration.getTemplate();
-        final String defaultName = configuration.getDefaultName();
+        final String template = "Hello, %s!";
+        final String defaultName = "world";
         environment.addResource(new HelloWorldResource(template, defaultName));
         environment.addHealthCheck(new TemplateHealthCheck(template));
     }
