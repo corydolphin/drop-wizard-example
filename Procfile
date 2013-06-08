@@ -1,2 +1,2 @@
-web:    java $JAVA_OPTS -jar --port $PORT target/dropwizard-example-*.jar
+web:    java $JAVA_OPTS -Ddw.http.port=$PORT -jar  target/dropwizard-example-0.0.1-SNAPSHOT.jar server
 
